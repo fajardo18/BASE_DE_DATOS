@@ -1,4 +1,4 @@
-# BASE_DE_DATOS
+# PROYECTO INTEGRADOR: BASE_DE_DATOS
 
 REALIZADO POR: Angelica Geraldine Fajardo.
 
