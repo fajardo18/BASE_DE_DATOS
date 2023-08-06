@@ -1,5 +1,7 @@
 # BASE_DE_DATOS
 
+REALIZADO POR: Angelica Geraldine Fajardo.
+
 Parte 1: Diseñando la DB
 Para este proyecto crearemos la base de datos de una cadena de tiendas
 
@@ -48,3 +50,5 @@ Item
 * monto_venta
 
 Tu tarea consiste en diseñar un diagrama ER con las relaciones entre tablas.
+
+## EL PROYECTO ESTA EN DESARROLLO.
