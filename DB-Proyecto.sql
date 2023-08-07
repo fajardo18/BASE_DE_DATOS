@@ -1,6 +1,6 @@
 CREATE TABLE Categoria(
-	ID INTERGER PRIMARY KEY NOT NULL,
-	NOMBRE TEXT
+	ID INT PRIMARY KEY NOT NULL,
+	Nombre TEXT
 );
 
 CREATE TABLE Producto (
@@ -19,9 +19,9 @@ CREATE TABLE Sucursal (
 );
 
 CREATE TABLE Stock (
-    ID INT PRIMARY KEY NOT NULL,
-    Sucursal_id INT,
-    Producto_id INT,
+    ID serial PRIMARY KEY,
+    Sucursal_id INT NOT NULL,
+    Producto_id INT NOT NULL,
     Cantidad INT,
     UNIQUE (sucursal_id, producto_id),
     FOREIGN KEY (sucursal_id) REFERENCES Sucursal(id),
