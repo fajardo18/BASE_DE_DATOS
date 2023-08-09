@@ -18,9 +18,9 @@ CREATE TABLE Sucursal (
 );
 
 CREATE TABLE Stock (
-    ID Serial PRIMARY KEY NOT NULL,
-    Sucursal_id INT,
-    Producto_id INT,
+    ID Serial PRIMARY KEY,
+    Sucursal_id INT NOT NULL,
+    Producto_id INT NOT NULL,
     Cantidad INT,
     UNIQUE (sucursal_id, producto_id)
     );
