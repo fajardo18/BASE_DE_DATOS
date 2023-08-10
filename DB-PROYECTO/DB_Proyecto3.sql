@@ -1,4 +1,4 @@
-CREATE TABLE Categoria(
+CREATE TABLE Categoria (
 	ID SERIAL PRIMARY KEY,
 	NOMBRE VARCHAR(50)
 );
@@ -25,7 +25,7 @@ CREATE TABLE Stock (
     UNIQUE (sucursal_id, producto_id)
 );
 
-CREATE TABLE Cliente(
+CREATE TABLE Cliente (
 	ID SERIAL PRIMARY KEY,
 	Nombre VARCHAR(50),
 	Telefono INTEGER
