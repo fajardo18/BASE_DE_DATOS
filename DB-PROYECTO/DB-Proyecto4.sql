@@ -45,6 +45,11 @@ CREATE TABLE Cliente(
 	Telefono BIGINT
 );
 
+== Para almacenar valores ENTEROS, por ejemplo, en campos que hacen referencia a cantidades, usamos:
+== 1) int (integer o int4): su rango es de -2000000000 a 2000000000 aprox.
+== 2) smallint (int2): Puede contener hasta 5 digitos. Su rango va desde –32000 hasta 32000 aprox.
+== 3) bigint (int8): De –9000000000000000000 hasta 9000000000000000000 aprox.
+
 insert into orden(id, cliente_id, sucursal_id, fecha, total)
 values
 	(1,	1,	3,	'2023-06-12', 600),
