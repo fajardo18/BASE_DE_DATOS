@@ -1,16 +1,23 @@
-# This is a sample Python script.
-
-# Press Mayús+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from tortoise import Tortoise, fields, run_async
+from tortoise.models import Model
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+class User(Model):
+    id = fields.IntField(pk=True)
+    name = fields.CharField(max_length=255)
+    email = fields.CharField(max_length=255)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+async def main():
+    await Tortoise.init(
+        db_url='sqlite://db.sqlite3',
+        modules={'models': ['__main__']},
+    )
+    await Tortoise.generate_schemas(safe=True)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+# A partir de aquí, puedes utilizar Tortoise ORM para interactuar con la base de datos
+
+run_async(main())
+
+
